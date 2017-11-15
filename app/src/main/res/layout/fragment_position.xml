@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/map"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+            <Button
+                android:id="@+id/kangseo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:layout_centerVertical="true"
+                android:foreground="@drawable/kangseo"
+                android:layout_toStartOf="@+id/kangnam_button"
+                android:layout_marginEnd="12dp" />
+                <Button
+                    android:id="@+id/kangbuk_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:foreground="@drawable/kangbuk"
+                    android:layout_above="@+id/kangseo_button"
+                    android:layout_alignStart="@+id/kangnam_button"
+                    android:layout_marginBottom="89dp" />
+                <Button
+                    android:id="@+id/kangnam_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00ff0000"
+                    android:foreground="@drawable/kangnam"
+                    android:layout_below="@+id/kangdong_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="82dp" />
+                <Button
+                    android:id="@+id/kangdong_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00ff0000"
+                    android:foreground="@drawable/kangdong"
+                    android:layout_below="@+id/kangbuk_button"
+                    android:layout_toEndOf="@+id/kangnam_button"
+                    android:layout_marginStart="23dp" />
+    </RelativeLayout>
+</LinearLayout>
