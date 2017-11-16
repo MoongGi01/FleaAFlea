@@ -9,17 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/main_backkey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/back"
+            android:background="@drawable/icon_new_back"
             android:layout_alignParentLeft="true"/>
         <TextView
+            android:id="@+id/main_page_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/logo96"
+            android:text="Flea a Flea"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#fb9db1"
+            android:textColor="#a6a6a6"
             android:layout_gravity="center"/>
 
     </android.support.v7.widget.Toolbar>

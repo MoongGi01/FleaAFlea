@@ -11,7 +11,12 @@
          android:layout_height="match_parent"
          android:orientation="vertical"
          >
-
+          <TextView
+              android:layout_gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="53dp"
+               android:background="@drawable/market_report_backgorund"
+              />
           <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"

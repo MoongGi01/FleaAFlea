@@ -42,7 +42,7 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation"
-        app:itemIconTint="#fb9db1"
-        app:itemTextColor="#fb9db1"/>
+        app:itemIconTint="#a6a6a6"
+        app:itemTextColor="#a6a6a6"/>
 
 </LinearLayout>

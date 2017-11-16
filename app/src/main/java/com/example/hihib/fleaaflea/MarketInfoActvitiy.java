@@ -13,9 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-public class MarketInfoActvitiy extends AppCompatActivity {
+public class MarketInfoActvitiy extends AppCompatActivity implements View.OnClickListener{
 
     ViewPager vp;
     View view;
@@ -27,7 +29,8 @@ public class MarketInfoActvitiy extends AppCompatActivity {
     int fragment_choice;
     boolean choice=false;
     Intent it;
-
+    ImageView main_backkey;
+    TextView main_page_submit;
     final Fragment fragment_info = new InfoFragment();
     final Fragment fragment_review = new ReviewFragment();
 
@@ -35,6 +38,10 @@ public class MarketInfoActvitiy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maket_info);
+        main_backkey = (ImageView)findViewById(R.id.main_backkey);
+        main_page_submit = (TextView)findViewById(R.id.main_page_submit);
+        main_backkey.setOnClickListener(this);
+        main_page_submit.setOnClickListener(this);
         vp=(ViewPager)findViewById(R.id.vp);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -135,6 +142,23 @@ public class MarketInfoActvitiy extends AppCompatActivity {
         }
 
     };
+
+    @Override
+    public void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.main_backkey:
+                this.onBackPressed();
+                break;
+            case R.id.main_page_submit:
+                Intent it = new Intent(MarketInfoActvitiy.this , MainActivity.class);
+                startActivity(it);
+                finish();
+                break;
+        }
+    }
+
     private class pagerAdapter extends FragmentStatePagerAdapter
     {
         public pagerAdapter(android.support.v4.app.FragmentManager fm)
