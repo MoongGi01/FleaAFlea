@@ -18,13 +18,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private ArrayList<MemberDTD> memberDTD = new ArrayList<>();
 
 
-    public RecyclerViewAdapter()
+    public RecyclerViewAdapter(String name , String msg)
     {
         memberDTD.add(new MemberDTD("이진구 ","저는 피규어를 정말 좋아하는데 재미있었어요"));
         memberDTD.add(new MemberDTD("오진석 ","친구 따라왔다가 구매했어요"));
-        memberDTD.add(new MemberDTD("함예지 ","생각보다 물건이 좀 많았어요"));
-        memberDTD.add(new MemberDTD("최현진 ","사람이 많아서 일찍 도착해야해요"));
-        memberDTD.add(new MemberDTD("김문기 ","저는 피규어를 좋아하지 않아요"));
+        memberDTD.add(new MemberDTD(name,msg));
     }
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

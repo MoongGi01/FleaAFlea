@@ -15,7 +15,8 @@ import android.widget.Toast;
  */
 
 public class HomeFragment extends Fragment implements View.OnClickListener{
-    ImageView figure , frand , letsrun;
+    ImageView figure , frand , letsrun ,respace;
+    Intent it;
     public HomeFragment() {
     }
 
@@ -31,10 +32,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         figure = (ImageView) layout.findViewById(R.id.figure);
         frand = (ImageView) layout.findViewById(R.id.frand);
         letsrun = (ImageView) layout.findViewById(R.id.letsrun);
-
+        respace = (ImageView) layout.findViewById(R.id.respace);
         figure.setOnClickListener(this);
         frand.setOnClickListener(this);
         letsrun.setOnClickListener(this);
+        respace.setOnClickListener(this);
         return layout;
     }
 
@@ -52,6 +54,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.letsrun:
                 Toast.makeText(getActivity(),"마켓 준비중입니다.",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.respace:
+                it = new Intent(getActivity() , MarketInfoActvitiy.class);
+                startActivity(it);
                 break;
         }
 

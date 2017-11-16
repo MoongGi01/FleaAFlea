@@ -1,4 +1,4 @@
-package com.example.hihib.fleaaflea;
+package com.example.hihib.fleaaflea.Respace;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.hihib.fleaaflea.R;
+import com.example.hihib.fleaaflea.ReviewPopupActivity;
 import com.example.hihib.fleaaflea.view.CommonSharedPref;
 import com.example.hihib.fleaaflea.view.Constants;
 import com.example.hihib.fleaaflea.view.RecyclerViewAdapter;

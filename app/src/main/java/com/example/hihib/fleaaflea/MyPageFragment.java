@@ -48,23 +48,19 @@ public class MyPageFragment extends Fragment implements View.OnClickListener{
         switch (v.getId())
         {
             case R.id.fr_mypage_button_favorite:
-                intent = new Intent(getActivity(), MypageTwoActivity.class);
-                intent.putExtra("type","favorite");
+                intent = new Intent(getActivity(), FavoriteActivity.class);
                 startActivity(intent);
                 break;
             case R.id.fr_mypage_button_report:
-                intent = new Intent(getActivity(), MypageTwoActivity.class);
-                intent.putExtra("type","report");
+                intent = new Intent(getActivity(), ReportActivity.class);
                 startActivity(intent);
                 break;
             case R.id.fr_mypage_button_insert:
-                intent = new Intent(getActivity(), MypageTwoActivity.class);
-                intent.putExtra("type","insert");
+                intent = new Intent(getActivity(), InsertActivity.class);
                 startActivity(intent);
                 break;
             case R.id.fr_mypage_button_myinfo:
-                intent = new Intent(getActivity(), MypageTwoActivity.class);
-                intent.putExtra("type","myinfo");
+                intent = new Intent(getActivity(), MyinfoActivity.class);
                 startActivity(intent);
                 break;
         }

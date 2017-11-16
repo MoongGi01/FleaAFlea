@@ -20,10 +20,16 @@
         </activity>
         <activity android:name=".MarketInfoActvitiy" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".MypageTwoActivity" />
-        <activity android:name=".ThemaPopupActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog">
-    </activity>
+        <activity
+            android:name=".ThemaPopupActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity
+            android:name=".ReviewPopupActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".InsertActivity" />
+        <activity android:name=".MyinfoActivity"></activity>
     </application>
 
 </manifest>
