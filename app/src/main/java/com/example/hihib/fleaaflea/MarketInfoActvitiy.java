@@ -156,6 +156,7 @@ public class MarketInfoActvitiy extends AppCompatActivity implements View.OnClic
                 startActivity(it);
                 finish();
                 break;
+            //test
         }
     }
 
