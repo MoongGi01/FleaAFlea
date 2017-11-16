@@ -155,7 +155,7 @@ public class MarketInfoActvitiy extends AppCompatActivity implements View.OnClic
                 Intent it = new Intent(MarketInfoActvitiy.this , MainActivity.class);
                 startActivity(it);
                 finish();
-                break;
+                break; gg
             //test
         }
     }
