@@ -1,4 +1,4 @@
-package com.example.hihib.fleaaflea.Respace;
+package com.example.hihib.fleaaflea.ChunHo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,11 +22,11 @@ import com.example.hihib.fleaaflea.view.RecyclerViewAdapter;
  * Created by hihib on 2017-10-20.
  */
 
-public class ReviewFragment extends Fragment implements View.OnClickListener{
+public class ChunHoReviewFragment extends Fragment implements View.OnClickListener{
     ImageView image_review_change;
     String name,msg;
 
-    public ReviewFragment() {
+    public ChunHoReviewFragment() {
     }
 
     @Override
@@ -37,7 +37,7 @@ public class ReviewFragment extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.fragment_review, container, false);
+        View layout = inflater.inflate(R.layout.fragment_chunho_review, container, false);
         try
         {
             name = CommonSharedPref.getStringValue(getContext(), Constants.KEY_NAME);

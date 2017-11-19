@@ -31,7 +31,7 @@ import android.widget.TextView;
 import static android.support.design.R.styleable.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
-DDDDD
+
     ViewPager vp;
     View view;
     Toolbar toolbar;

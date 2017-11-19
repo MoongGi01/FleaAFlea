@@ -1,4 +1,4 @@
-package com.example.hihib.fleaaflea.Respace;
+package com.example.hihib.fleaaflea.ChunHo;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,10 +16,10 @@ import com.example.hihib.fleaaflea.R;
  * Created by hihib on 2017-10-20.
  */
 
-public class InfoFragment extends Fragment{
+public class ChunHoInfoFragment extends Fragment{
     TextView marketurl;
-    String URL = "http://fiple.creatorlink.net/";
-    public InfoFragment() {
+    String URL = "http://blog.naver.com/youth-store";
+    public ChunHoInfoFragment() {
     }
 
     @Override
@@ -30,7 +30,7 @@ public class InfoFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         View layout = inflater.inflate(R.layout.fragment_info, container, false);
+         View layout = inflater.inflate(R.layout.fragment_chunho_info, container, false);
 
         marketurl = (TextView) layout.findViewById(R.id.marketurl);
         marketurl.setOnClickListener(new View.OnClickListener() {

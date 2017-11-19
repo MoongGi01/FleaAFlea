@@ -1,4 +1,4 @@
-package com.example.hihib.fleaaflea.Respace;
+package com.example.hihib.fleaaflea.LotteTower;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +25,7 @@ import com.example.hihib.fleaaflea.MyPageFragment;
 import com.example.hihib.fleaaflea.R;
 import com.example.hihib.fleaaflea.ReviewFragment;
 
-public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnClickListener{
+public class LotteTowerInfoActivity extends AppCompatActivity implements View.OnClickListener{
 
     ViewPager vp;
     View view;
@@ -39,13 +39,13 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
     Intent it;
     ImageView main_backkey;
     TextView main_page_submit;
-    final Fragment fragment_info = new RespaceInfoFragment();
-    final Fragment fragment_review = new RespaceReviewFragment();
+    final Fragment fragment_info = new LotteTowerInfoFragment();
+    final Fragment fragment_review = new LotteTowerReviewFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_respace_info);
+        setContentView(R.layout.activity_main);
         main_backkey = (ImageView)findViewById(R.id.main_backkey);
         main_page_submit = (TextView)findViewById(R.id.main_page_submit);
         main_backkey.setOnClickListener(this);
@@ -56,13 +56,15 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container,fragment_info).commit();
+        rl = (RelativeLayout)findViewById(R.id.container);
+        rl.setVisibility(View.VISIBLE);
         getTabLayout();
     }
     void getToolbar()
     {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        vp.setAdapter(new RespaceInfoActvitiy.pagerAdapter(getSupportFragmentManager()));
+        vp.setAdapter(new LotteTowerInfoActivity.pagerAdapter(getSupportFragmentManager()));
 //        vp.setCurrentItem(0);
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -128,19 +130,19 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_market_report:
-                    it = new Intent(RespaceInfoActvitiy.this , MainActivity.class);
+                    it = new Intent(LotteTowerInfoActivity.this , MainActivity.class);
                     it.putExtra("item",0);
                     startActivity(it);
                     finish();
                     return true;
                 case R.id.navigation_home:
-                    it = new Intent(RespaceInfoActvitiy.this , MainActivity.class);
+                    it = new Intent(LotteTowerInfoActivity.this , MainActivity.class);
                     it.putExtra("item",1);
                     startActivity(it);
                     finish();
                     return true;
                 case R.id.navigation_mypage:
-                    it = new Intent(RespaceInfoActvitiy.this , MainActivity.class);
+                    it = new Intent(LotteTowerInfoActivity.this , MainActivity.class);
                     it.putExtra("item",2);
                     startActivity(it);
                     finish();
@@ -160,7 +162,7 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
                 this.onBackPressed();
                 break;
             case R.id.main_page_submit:
-                Intent it = new Intent(RespaceInfoActvitiy.this , MainActivity.class);
+                Intent it = new Intent(LotteTowerInfoActivity.this , MainActivity.class);
                 startActivity(it);
                 finish();
                 break;

@@ -30,6 +30,13 @@
         <activity android:name=".ReportActivity" />
         <activity android:name=".InsertActivity" />
         <activity android:name=".MyinfoActivity"></activity>
+        <activity android:name=".LotteTower.LotteTowerInfoActivity"></activity>
+        <activity android:name=".Bazzar.BazzarInfoActivity"></activity>
+        <activity android:name=".CityMarket.CityMarketInfoActivity"></activity>
+        <activity android:name=".Yg.YgInfoActivity"></activity>
+        <activity android:name=".Mom.MomInfoActivity"></activity>
+        <activity android:name=".ChunHo.ChunHoInfoActivity"></activity>
+        <activity android:name=".ChangDong.ChangDongInfoActivity"></activity>
     </application>
 
 </manifest>
