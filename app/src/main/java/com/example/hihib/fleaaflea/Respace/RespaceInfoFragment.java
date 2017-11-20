@@ -18,7 +18,7 @@ import com.example.hihib.fleaaflea.R;
 
 public class RespaceInfoFragment extends Fragment{
     TextView marketurl;
-    String URL = "http://fiple.creatorlink.net/";
+    String URL = "http://korean.visitkorea.or.kr/kor/bz15/where/festival/festival.jsp?cid=2490270";
     public RespaceInfoFragment() {
     }
 
@@ -30,7 +30,7 @@ public class RespaceInfoFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         View layout = inflater.inflate(R.layout.fragment_info, container, false);
+         View layout = inflater.inflate(R.layout.respace_fragment_info, container, false);
 
         marketurl = (TextView) layout.findViewById(R.id.marketurl);
         marketurl.setOnClickListener(new View.OnClickListener() {

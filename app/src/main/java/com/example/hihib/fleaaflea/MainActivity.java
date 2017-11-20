@@ -2,6 +2,9 @@ package com.example.hihib.fleaaflea;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -17,21 +20,39 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.kakao.auth.AuthType;
+import com.kakao.auth.ISessionCallback;
+import com.kakao.auth.Session;
+import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.MeResponseCallback;
+import com.kakao.usermgmt.response.model.UserProfile;
+import com.kakao.util.exception.KakaoException;
+import com.kakao.util.helper.log.Logger;
+
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import static android.support.design.R.styleable.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button main_login;
     ViewPager vp;
     View view;
     Toolbar toolbar;
@@ -44,19 +65,40 @@ public class MainActivity extends AppCompatActivity {
     private PopupWindow mPopWindow;
     TabLayout tabs;
     int item = 1;
+    private SessionCallback mKokoacallback;
+    String profile;
+    String userID;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         vp=(ViewPager)findViewById(R.id.vp);
+        main_login=(Button)findViewById(R.id.main_login);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         getToolbar();
         getTabLayout();
+
+        main_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                mKokoacallback = new SessionCallback();
+                com.kakao.auth.Session.getCurrentSession().addCallback(mKokoacallback);
+                com.kakao.auth.Session.getCurrentSession().checkAndImplicitOpen();
+                com.kakao.auth.Session.getCurrentSession().open
+                        (AuthType.KAKAO_TALK_EXCLUDE_NATIVE_LOGIN,MainActivity.this);
+            }
+        });
+
     }
+
     void getToolbar()
     {
         Intent it = getIntent();

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by hihib on 2017-10-20.
@@ -60,8 +61,7 @@ public class MyPageFragment extends Fragment implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.fr_mypage_button_myinfo:
-                intent = new Intent(getActivity(), MyinfoActivity.class);
-                startActivity(intent);
+                Toast.makeText(getActivity() , "로그인을 해주세요" ,Toast.LENGTH_SHORT).show();
                 break;
         }
     }

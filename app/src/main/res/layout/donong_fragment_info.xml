@@ -15,7 +15,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/figure_fleamarket"/>
+                android:background="@drawable/mainimage_donong"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="주최 기간 : 피규어 스퀘어"
+                    android:text="주최 기관 : DNCJ"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -46,7 +46,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="전화번호 : 010-6565-5023"
+                    android:text="전화번호 : 링크참조"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -54,7 +54,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="진행기간 : 2017년 10월 28일 (토)"
+                    android:text="진행기간 : 2017년 11월 28일 (화)"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -62,7 +62,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="오픈시간 : 14:00 ~ 17:00"
+                    android:text="오픈시간 : 11:00 ~ 14:00"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="마켓설명 : 피규어 플리마켓 피.플은 키덜트에게 타케팅 된 피규어 중심의 중고장터 입니다."
+                    android:text="마켓설명 : 퀄리티 있는 프리마켓! 득템하러오세요!!!"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -79,7 +79,7 @@
                     android:id="@+id/marketurl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="마켓 URL : http://swindow.naver.com/living/specialEvent"
+                    android:text="마켓 URL : http://cafe.naver.com/freemarket0123"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -108,12 +108,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/one"/>
+                    android:background="@drawable/donong1"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/two"/>
+                    android:background="@drawable/donong2"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,12 +123,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/three"/>
+                    android:background="@drawable/donong3"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/four"/>
+                    android:background="@drawable/donong4"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -1,6 +1,7 @@
 package com.example.hihib.fleaaflea;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 public class ThemaPopupActivity extends Activity implements View.OnClickListener{
     CheckBox checkbox_handmade , checkbox_vintage , checkbox_festival , checkbox_etc;
     Button thema_popup_button_submit;
+    Intent it;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,6 @@ public class ThemaPopupActivity extends Activity implements View.OnClickListener
         checkbox_festival.setOnClickListener(this);
         checkbox_etc.setOnClickListener(this);
         thema_popup_button_submit.setOnClickListener(this);
-
     }
 
     @Override
@@ -64,9 +65,31 @@ public class ThemaPopupActivity extends Activity implements View.OnClickListener
                 checkbox_festival.setChecked(false);
                 break;
             case R.id.thema_popup_button_submit:
-                Toast.makeText(ThemaPopupActivity.this , "h2" , Toast.LENGTH_LONG).show();
+                if(checkbox_handmade.isChecked())
+                {
+                    it = new Intent(ThemaPopupActivity.this , HandMadeActivity.class);
+                    startActivity(it);
+                    finish();
+                }
+                else if (checkbox_vintage.isChecked())
+                {
+                    it = new Intent(ThemaPopupActivity.this , VintageActivity.class);
+                    startActivity(it);
+                    finish();
+                }
+                else if (checkbox_festival.isChecked())
+                {
+                    it = new Intent(ThemaPopupActivity.this , FestivalActivity.class);
+                    startActivity(it);
+                    finish();
+                }
+                else if (checkbox_etc.isChecked())
+                {
+                    it = new Intent(ThemaPopupActivity.this , ETCActivity.class);
+                    startActivity(it);
+                    finish();
+                }
                 break;
         }
-
     }
 }

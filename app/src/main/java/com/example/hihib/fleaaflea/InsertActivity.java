@@ -13,6 +13,7 @@ public class InsertActivity extends AppCompatActivity implements View.OnClickLis
     ImageView main_backkey;
     TextView main_page_submit;
     Button activity_insert_button_submit;
+    Intent it;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,12 @@ public class InsertActivity extends AppCompatActivity implements View.OnClickLis
                 this.onBackPressed();
                 break;
             case R.id.main_page_submit:
-                Intent it = new Intent(getApplicationContext() , MainActivity.class);
+                it = new Intent(getApplicationContext() , MainActivity.class);
+                startActivity(it);
+                finish();
+                break;
+            case R.id.activity_insert_button_submit:
+                it = new Intent(getApplicationContext() , MainActivity.class);
                 startActivity(it);
                 finish();
                 break;

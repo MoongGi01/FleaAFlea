@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="주최 기간 : 피규어 스퀘어"
+                    android:text="주최 기관 : 피규어 스퀘어"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"

@@ -45,8 +45,9 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_respace_info);
+        setContentView(R.layout.activity_main);
         main_backkey = (ImageView)findViewById(R.id.main_backkey);
+        main_backkey.setVisibility(View.VISIBLE);
         main_page_submit = (TextView)findViewById(R.id.main_page_submit);
         main_backkey.setOnClickListener(this);
         main_page_submit.setOnClickListener(this);
@@ -54,10 +55,15 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        rl = (RelativeLayout)findViewById(R.id.container);
         fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container,fragment_info).commit();
+        rl.setVisibility(View.VISIBLE);
         getTabLayout();
     }
+
+
+
     void getToolbar()
     {
         setSupportActionBar(toolbar);
@@ -107,7 +113,6 @@ public class RespaceInfoActvitiy extends AppCompatActivity implements View.OnCli
 
                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.container,selected).commit();
-                rl = (RelativeLayout)findViewById(R.id.container);
                 rl.setVisibility(View.VISIBLE);
             }
 

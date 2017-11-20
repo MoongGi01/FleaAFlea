@@ -3,6 +3,7 @@
     package="com.example.hihib.fleaaflea">
 
     <application
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@drawable/main_ic_launcher"
         android:label="@string/app_name"
@@ -37,6 +38,25 @@
         <activity android:name=".Mom.MomInfoActivity"></activity>
         <activity android:name=".ChunHo.ChunHoInfoActivity"></activity>
         <activity android:name=".ChangDong.ChangDongInfoActivity"></activity>
-    </application>
 
+        <activity android:name=".Flower.FlowerInfoActvitiy"></activity>
+        <activity android:name=".MainStreet.StreetInfoActvitiy"></activity>
+        <activity android:name=".Donong.DonongInfoActvitiy"></activity>
+        <activity android:name=".Dope.DopeInfoActvitiy"></activity>
+        <activity android:name=".Dessert.DessertInfoActvitiy"></activity>
+        <activity android:name=".DessertFare.DessertFareInfoActvitiy"></activity>
+        <activity android:name=".RainBow.RainBowInfoActvitiy"></activity>
+        <activity android:name=".Respace.RespaceInfoActvitiy"/>
+        <activity android:name=".HandMadeActivity"/>
+        <activity android:name=".VintageActivity"/>
+        <activity android:name=".FestivalActivity"/>
+        <activity android:name=".ETCActivity"/>
+        <activity android:name=".GangDongActivity"/>
+        <activity android:name=".GangBukActivity"/>
+        <activity android:name=".GangSeoActivity"/>
+        <activity android:name=".GangNamActivity"/>
+    <meta-data android:name="com.kakao.sdk.AppKey"
+        android:value="@string/kakao_app_key" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

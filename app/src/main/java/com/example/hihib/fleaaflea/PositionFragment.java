@@ -1,6 +1,7 @@
 package com.example.hihib.fleaaflea;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 public class PositionFragment extends Fragment implements View.OnClickListener{
     Button kangseo_button,kangnam_button,kangbuk_button,kangdong_button;
     Activity root = getActivity();
+    Intent it;
     public PositionFragment() {
     }
 
@@ -46,16 +48,20 @@ public class PositionFragment extends Fragment implements View.OnClickListener{
         switch (v.getId())
         {
             case R.id.kangseo_button:
-                Toast.makeText(getActivity() , "강서", Toast.LENGTH_LONG ).show();
+                it = new Intent(getActivity(), GangSeoActivity.class);
+                startActivity(it);
                 break;
             case R.id.kangbuk_button:
-                Toast.makeText(getActivity() , "강북", Toast.LENGTH_LONG ).show();
+                it = new Intent(getActivity(), GangBukActivity.class);
+                startActivity(it);
                 break;
             case R.id.kangnam_button:
-                Toast.makeText(getActivity() , "강남", Toast.LENGTH_LONG ).show();
+                it = new Intent(getActivity(), GangNamActivity.class);
+                startActivity(it);
                 break;
             case R.id.kangdong_button:
-                Toast.makeText(getActivity() , "강동", Toast.LENGTH_LONG ).show();
+                it = new Intent(getActivity(), GangDongActivity.class);
+                startActivity(it);
                 break;
 
         }

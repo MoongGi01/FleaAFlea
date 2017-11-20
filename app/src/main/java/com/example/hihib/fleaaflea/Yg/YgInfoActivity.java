@@ -45,6 +45,7 @@ public class YgInfoActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         main_backkey = (ImageView)findViewById(R.id.main_backkey);
+        main_backkey.setVisibility(View.VISIBLE);
         main_page_submit = (TextView)findViewById(R.id.main_page_submit);
         main_backkey.setOnClickListener(this);
         main_page_submit.setOnClickListener(this);

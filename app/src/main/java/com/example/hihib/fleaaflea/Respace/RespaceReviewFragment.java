@@ -37,7 +37,7 @@ public class RespaceReviewFragment extends Fragment implements View.OnClickListe
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.fragment_review, container, false);
+        View layout = inflater.inflate(R.layout.respace_fragment_review, container, false);
         try
         {
             name = CommonSharedPref.getStringValue(getContext(), Constants.KEY_NAME);

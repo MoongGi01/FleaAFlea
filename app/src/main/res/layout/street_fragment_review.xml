@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/figure_fleamarket"
+        android:background="@drawable/mainimage_street"
         android:layout_marginBottom="10dp"/>
     <RelativeLayout
         android:layout_width="match_parent"

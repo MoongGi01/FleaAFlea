@@ -20,8 +20,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     public RecyclerViewAdapter(String name , String msg)
     {
-        memberDTD.add(new MemberDTD("이진구 ","저는 피규어를 정말 좋아하는데 재미있었어요"));
-        memberDTD.add(new MemberDTD("오진석 ","친구 따라왔다가 구매했어요"));
+        memberDTD.add(new MemberDTD("운영자","후기를 남겨주세요!"));
         memberDTD.add(new MemberDTD(name,msg));
     }
     @Override

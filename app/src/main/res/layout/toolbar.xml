@@ -13,16 +13,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/icon_back"
+            android:visibility="gone"
             android:layout_alignParentLeft="true"/>
         <TextView
-            android:id="@+id/main_page_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Flea a Flea"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#FFC400"
-            android:layout_gravity="center"/>
+        android:id="@+id/main_page_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flea a Flea"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFC400"
+        android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/main_login"
+            android:layout_width="50dp"
+            android:layout_height="36dp"
+            android:background="#FFC400"
+            android:foreground="@drawable/icon_login"
+            android:layout_margin="5dp"
+            android:layout_gravity="right"/>
 
     </android.support.v7.widget.Toolbar>
 </LinearLayout>

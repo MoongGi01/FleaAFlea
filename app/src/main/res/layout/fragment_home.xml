@@ -5,42 +5,44 @@
     android:orientation="vertical"
     >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:background="@drawable/home_border">
 
         <TextView
+            android:id="@+id/kakao_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="오늘의 플리마켓은!?"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
-    </RelativeLayout>
-
+    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/figure"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/figure_fleamarket" />
-
-
-            <ImageView
                 android:id="@+id/respace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/mainimage_respace" />
-
+                android:background="@drawable/mainimage_respace1" />
+            <ImageView
+                android:id="@+id/chunho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_chunho1" />
+            <ImageView
+                android:id="@+id/citymarket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_citymarket1" />
             <ImageView
                 android:id="@+id/lottetower"
                 android:layout_width="match_parent"
@@ -53,11 +55,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/mainimage_bazzar1" />
 
-            <ImageView
-                android:id="@+id/citymarket"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/mainimage_citymarket1" />
 
             <ImageView
                 android:id="@+id/yg"
@@ -72,16 +69,54 @@
                 android:background="@drawable/mainimage_mom1" />
 
             <ImageView
-                android:id="@+id/chunho"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/mainimage_chunho1" />
-
-            <ImageView
                 android:id="@+id/changdong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/mainimage_changdong1" />
+                />
+            <ImageView
+                android:id="@+id/flower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_flower1" />
+            />
+            <ImageView
+                android:id="@+id/street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_mainstreet1" />
+            />
+            <ImageView
+                android:id="@+id/donong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_donong1" />
+            />
+            <ImageView
+                android:id="@+id/dope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_dope1" />
+            />
+            <ImageView
+                android:id="@+id/dessert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_desert1" />
+            />
+            <ImageView
+                android:id="@+id/dessertfare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_desertpare1" />
+            />
+            <ImageView
+                android:id="@+id/rainbow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainimage_rainbow1" />
+            />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
